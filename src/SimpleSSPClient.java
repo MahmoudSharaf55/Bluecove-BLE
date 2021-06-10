@@ -1,6 +1,3 @@
-/**
- * A simple SSP client that connects to an SSP Server
- */
 import java.util.Vector;
 import java.io.*;
 

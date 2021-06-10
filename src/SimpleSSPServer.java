@@ -12,11 +12,6 @@ import javax.microedition.io.Connector;
 import javax.microedition.io.StreamConnection;
 import javax.microedition.io.StreamConnectionNotifier;
 //import com.intel.bluetooth.BluetoothRFCommConnectionNotifier;
-
-/**
- * Class that implements an SSP Server which accepts single line
- * message from an SSP client and sends a single line of response to the client.
- */
 public class SimpleSSPServer {
 
     //start server
@@ -31,8 +26,8 @@ public class SimpleSSPServer {
         UUID uuid = new UUID("1101", true);
 //        UUID uuid = new UUID("e0cbf06ccd8b4647bb8a263b43f0f974", false); // 446118f08b1e11e29e960800200c9a66 - e0cbf06ccd8b4647bb8a263b43f0f974   -   547c6387-e93c-4caa-9049-c32d628a1c1c
         //Create the servicve url
-        String connectionString = "btgoep://localhost:" + "e0cbf06ccd8b4647bb8a263b43f0f974" +";name=obex";
-//        String connectionString = "btspp://localhost:" + uuid +";name=G-ADMIN";
+//        String connectionString = "btgoep://localhost:" + "e0cbf06ccd8b4647bb8a263b43f0f974" +";name=obex";
+        String connectionString = "btspp://localhost:" + uuid +";name=obex";
 
         //open server url
         StreamConnectionNotifier streamConnNotifier = (StreamConnectionNotifier)Connector.open( connectionString );
